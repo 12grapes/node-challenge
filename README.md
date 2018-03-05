@@ -1,3 +1,7 @@
+<p align="left">
+  <img height="100px" src="https://bunch.ai/wp-content/themes/bunch/images/bunch-logo-rgb.svg" alt="Bunch" />
+</p>
+
 # Backend Coding Challenge
 
 ## Build & Run
