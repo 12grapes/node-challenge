@@ -18,6 +18,7 @@ While this might not be a realistic scenario (the aggregates can be done using K
 ## Build & Run
 
 ```sh
+docker-compose up -d elasticsearch kibana
 yarn install
 yarn dev
 # once the API is dockerized
@@ -53,7 +54,7 @@ yarn test:watch
 
 You can perform a search on "TODO:" in all files to obtain the emplacement of each of the following tasks:
 
-* Dockerize the API. A `docker-compose` file are already provided, once the application is dockerized it will have access to elasticsearch (available through http://elastic:9200). If you cannot Dockerize the API, you can do the following to continue the challenge:
+* Dockerize the API. A `docker-compose` file is already provided, once the application is dockerized, it will have access to elasticsearch (available through http://elastic:9200). If you cannot Dockerize the API, you can do the following to continue the challenge:
 
 ```sh
 # Starts the required infrastructure
@@ -84,5 +85,5 @@ We expect you to spend 2-4 hours on this challenge. If you find yourself spendin
 
 **Tips:**
 
-* Make sure to remain focused and not get side-tracked, or the challenge will take more then 4 hours to complete.
-* We are also not expecting production ready code, so you can leave out some aspects you would judge important (however, documenting them is always a plus).
+* Make sure to remain focused and not get side-tracked, or the challenge will take more than 4 hours to complete.
+* We are also not expecting production ready code, so you can leave out some aspects you would otherwise consider important (however, documenting these decisions is always a plus).
