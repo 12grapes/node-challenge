@@ -63,13 +63,13 @@ docker-compose up -d elasticsearch kibana
 yarn dev
 ```
 
-* Write a middleware to log HTTP requests in the application. It must contain the response status code, request path and time taken to process the request server-side. Additionaly, you can also set a custom HTTP header to indicate the time taken to the client.
-
-* Write an error logging middleware. When in development (`NODE_ENV=development`), it should log the entire `error` and include it in the reponse. When in production (`NODE_ENV=production`), it should only return the `error.message`.
-
 * Write unit tests for the all the `/health` routes. The other part of the application do not need to be tested for this challenge. This should also bring the coverage above the thresholds specified in `package.json`.
 
 * Implement the `GET /health/weekly-report` route by writing a single elasticsearch query to retrieve a weekly aggregate of healthchecks, grouped by requesting IP and URL. To generate data, perform a few calls to the `GET /health` endpoint, you can visualize the data with Kibana (running with `docker-compose` on http://localhost:5601/app/kibana)
+
+* (Bonus) Write a middleware to log HTTP requests in the application. It must contain the response status code, request path and time taken to process the request server-side. Additionaly, you can also set a custom HTTP header to indicate the time taken to the client.
+
+* (Bonus) Write an error logging middleware. When in development (`NODE_ENV=development`), it should log the entire `error` and include it in the reponse. When in production (`NODE_ENV=production`), it should only return the `error.message`.
 
 * (Bonus) Build a CI pipeline with the tool of your choice. We like to run tests within containers in CI environments.
 
