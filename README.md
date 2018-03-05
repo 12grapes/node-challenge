@@ -68,11 +68,11 @@ yarn dev
 
 * Write unit tests for the all the `/health` routes. The other part of the application do not need to be tested for this challenge. This should also bring the coverage above the thresholds specified in `package.json`.
 
-* Implement the `GET /health//weekly-report` route by writing a single elasticsearch query to retrieve a weekly aggregate of healthchecks, grouped by requesting IP and URL. To generate data, perform a few calls to the `GET /health` endpoint, you can visualize the data with Kibana (running with `docker-compose` on http://localhost:5601/app/kibana)
+* Implement the `GET /health/weekly-report` route by writing a single elasticsearch query to retrieve a weekly aggregate of healthchecks, grouped by requesting IP and URL. To generate data, perform a few calls to the `GET /health` endpoint, you can visualize the data with Kibana (running with `docker-compose` on http://localhost:5601/app/kibana)
 
 * (Bonus) Build a CI pipeline with the tool of your choice. We like to run tests within containers in CI environments.
 
-* (Bonus) Add a Redis instance in `docker-compose` and cache results of the `GET /health//weekly-report` requests with an expiration of 10 minutes.
+* (Bonus) Add a Redis instance in `docker-compose` and cache results of the `GET /health/weekly-report` requests with an expiration of 10 minutes.
 
 ## Deliverables
 
