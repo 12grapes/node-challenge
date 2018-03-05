@@ -30,6 +30,10 @@ router.get('/', async (ctx, next) => {
   ctx.body = { success: true, result }
 })
 
+/**
+ * Weekly report endpoint, returns a weekly aggregate of healthchecks,
+ * grouped by IP and URL
+ */
 router.get('/weekly-report', async (ctx, next) => {
   const result = await search({
     body: {
