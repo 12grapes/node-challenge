@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/health should respond 200 and JSON with an success: true status 1`] = `
+Object {
+  "result": Object {
+    "result": "created",
+  },
+  "success": true,
+}
+`;
