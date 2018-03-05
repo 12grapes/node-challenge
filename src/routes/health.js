@@ -4,7 +4,7 @@ const { elasticsearch } = require('../services')
 const router = new Router({ prefix: '/health' })
 
 // use partial application to configure the `index` and `search` method
-const defaultParams = { index: 'healtchecks', type: 'healthcheck' }
+const defaultParams = { index: 'healthchecks', type: 'healthcheck' }
 const client = elasticsearch.getElasticSearchClient()
 const index = R.partial(elasticsearch.index, [defaultParams, client])
 const search = R.partial(elasticsearch.search, [defaultParams, client])
@@ -15,14 +15,15 @@ const search = R.partial(elasticsearch.search, [defaultParams, client])
  */
 router.get('/', async (ctx, next) => {
   // log the healthcheck
-  const timestamp = Math.floor(new Date())
+  const date = new Date()
+  const timestamp = Math.floor(date)
   const result = await index({
     id: `${timestamp}`,
     body: {
       healthcheck: 'OK',
       ip: ctx.request.ip,
       url: ctx.request.URL,
-      timestamp
+      timestamp: date
     }
   })
   ctx.status = 200
