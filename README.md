@@ -4,6 +4,17 @@
 
 # Backend Coding Challenge
 
+## Background
+
+This repository contains:
+
+* a Koa API
+* Docker configuration to run Elasticsearch and Kibana
+
+The Koa API exposes two routes, `/health` and `/health/weekly-report`. The first one is a route that logs incoming requests in elasticsearch, including the request's IP, timestamp and other information. The second route allows to do weekly reports on the health of this service.
+
+While this might not be a realistic scenario (the aggregates can be done using Kibana dashboards, and the logs collected with tools such as `fluentd`), it allows to perform tasks that will be pretty common when working on our Node.js backend stack. We use elasticsearch a lot to index documents and perform aggregations, while exposing them on Node.js APIs with good test coverage.
+
 ## Build & Run
 
 ```sh
@@ -69,9 +80,9 @@ Submit the result either by either sharing your fork of this repository on Githu
 
 ## Expected time
 
-We expect you to spend 2-4 hours on this challenge. If you find yourself spending more time on it, you can send your results as it should be enough to evaluate.
+We expect you to spend 2-4 hours on this challenge. If you find yourself spending more time on it, you can send your results as it should be enough to evaluate. The Bonus questions will take the challenge clearly out of this 2-4 hours timeframe, so it's completely OK if you don't have enough free time to do them.
 
 **Tips:**
 
-* Make sure to remain focused and not get side-tracked, or the challenge will take more then 4 hours to complete. 
+* Make sure to remain focused and not get side-tracked, or the challenge will take more then 4 hours to complete.
 * We are also not expecting production ready code, so you can leave out some aspects you would judge important (however, documenting them is always a plus).
